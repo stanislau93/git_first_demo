@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    .paragraph {
+      background-color: green;
+    }
+
+    .paragraph::first-line {
+      background-color: blanchedalmond;
+    }
+
+    a:hover {
+      background-color: cornsilk;
+    }
+
+    p:not(:first-of-type) {
+      font-size: 40px;
+    }
+    
+    p:empty {
+      width: 100px;  
+      height: 100px;
+      background-color: bisque;  
+    }
+
+    #text-input:focus {
+      line-height: 30px;
+    }
+
+    .list-item::marker {
+      content: "🐅";
+    }
+
+    .list-item:hover::marker {
+      content: "🐘";
+    }
+
+    p:not(.middle-paragraph) {
+      text-decoration: underline;
+    }
+
+    .middle-paragraph::before {
+      content: "content before ";
+      font-size: larger;
+      font-weight: bolder;
+      margin-right: 10px;
+    }
+
+    .middle-paragraph::after {
+      content: " content after";
+      font-size: larger;
+      font-weight: bolder;
+      margin-left: 10px;
+    }
+
+    tbody > tr:nth-child(2n - 1) {
+      background-color: lightyellow;
+    }
+  </style>
+</head>
+
+<body>
+  <input type="text" id="text-input" />
+
+  <div>
+    <div>asdasd</div>
+    <p id="paragraph-id" class="paragraph important-paragraph">
+      Lorem ipsum, dolor <a href="#"> sit amet consectetur adipisicing elit.</a> Quasi, deleniti ullam accusamus 
+    </p>
+    <p class="paragraph important-paragraph">
+      iure, repudiandae voluptatem, fuga quaerat numquam impedit beatae ab laboriosam velit? Qui est odio totam amet pariatur saepe.
+    </p>
+    <p>
+      Some more text
+    </p>
+  </div>
+ 
+  <div class="empty"></div>
+  <p></p>
+  <span></span>
+
+  <p class="middle-paragraph">I've got content before and after me</p>
+
+  <ul>
+    <li class="list-item">One</li>
+    <li class="list-item">Two</li>
+    <li class="list-item">Three</li>
+  </ul>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Note</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Diana</td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <td>Paulina</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>Max</td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td>Robert</td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <td>Thilo</td>
+        <td>4</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+
+</html>
