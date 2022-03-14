@@ -1,0 +1,1 @@
+This is a simple project created with the purpose of demonstrating how git works. It only contains one file.
